@@ -27,10 +27,10 @@ jobs:
         java-version: '11'
         distribution: 'temurin'
         cache: maven
-    - name: SonarQube Analysis
-      run: | 
-            cat .git/shallow
-            mvn sonar:sonar -Dsonar.projectKey=avinorg1_srmvn-301220221333 -Dsonar.host.url=http://65.0.198.126:9000/ -Dsonar.login=${{ secrets.SONAR_TOKEN }}
+    # - name: SonarQube Analysis
+    #   run: | 
+    #         cat .git/shallow
+    #         mvn sonar:sonar -Dsonar.projectKey=avinorg1_srmvn-301220221333 -Dsonar.host.url=http://65.0.198.126:9000/ -Dsonar.login=${{ secrets.SONAR_TOKEN }}
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Needed to get PR information, if any need
         SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
